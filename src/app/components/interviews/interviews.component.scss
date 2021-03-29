@@ -1,0 +1,69 @@
+.content {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.paragraph {
+  background-color: rgb(175, 175, 175);
+  padding: 5%;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: 0.3s ease-out;
+  opacity: 0;
+  width: 40%;
+}
+.Sondage {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5%;
+}
+.paragraphBig {
+  background-color: rgb(175, 175, 175);
+  padding: 5%;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: 0.3s ease-out;
+  opacity: 0;
+}
+.frise1 {
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  opacity: 0;
+  transition: 0.3s;
+  width: 50%;
+}
+.frise2 {
+  margin: auto;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  opacity: 0;
+  height: 80vh;
+  width: 80vw;
+  transition: 0.3s;
+}
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media all and (max-width: 992px) {
+  .content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .frise1 {
+    width: 100%;
+  }
+  .frise2 {
+    width: 100%;
+  }
+  .paragraph {
+    width: 100%;
+  }
+  .Sondage {
+    display: block;
+  }
+}

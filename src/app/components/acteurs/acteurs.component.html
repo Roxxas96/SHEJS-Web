@@ -1,0 +1,18 @@
+<div class="content">
+  <img src="assets/Carte-Mentale.png" width="100%" class="frise activable" />
+  <div
+    *ngFor="let acteur of acteurs; let i = index"
+    [ngClass]="{
+      paragraph: true,
+      left: i % 2 == 0,
+      right: i % 2 != 0,
+      activable: true
+    }"
+  >
+    <h2 style="text-align: left; margin-bottom: 5%">{{ acteur.titre }}</h2>
+    <p>
+      {{ acteur.contenu1 }}
+    </p>
+    <p>{{ acteur.contenu2 }}</p>
+  </div>
+</div>

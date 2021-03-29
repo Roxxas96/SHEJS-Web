@@ -1,0 +1,17 @@
+<div class="content">
+  <div class="grid">
+    <a
+      *ngFor="let source of sources"
+      class="paragraph activable"
+      [href]="source.link"
+    >
+      <img *ngIf="source.img != ''" [src]="source.img" class="background-img" />
+      <h2 style="margin-bottom: 30%">
+        {{ source.titre }}
+      </h2>
+      <h3>
+        {{ source.contenu }}
+      </h3>
+    </a>
+  </div>
+</div>

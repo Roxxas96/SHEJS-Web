@@ -1,0 +1,48 @@
+.content {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    [col-start] minmax(350px, 1fr) [col-end]
+  );
+}
+.paragraph {
+  background-color: rgb(175, 175, 175);
+  padding: 5%;
+  border-radius: 10px;
+  transform: scale(0);
+  transition: 0.3s ease-out;
+  opacity: 0;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  position: relative;
+  color: white;
+  height: 400px;
+}
+.active {
+  opacity: 1;
+  transform: scale(1);
+}
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  filter: brightness(30%) blur(2px);
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media all and (max-width: 992px) {
+  .content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

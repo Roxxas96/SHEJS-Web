@@ -1,0 +1,70 @@
+<nav class="navbar">
+  <div class="left">
+    <div
+      ngbDropdown
+      #drop1="ngbDropdown"
+      class="d-inline-block"
+      (mouseenter)="drop1.open()"
+      (mouseleave)="drop1.close()"
+    >
+      <button
+        style="background: none; border: none"
+        id="dropdownBasic2"
+        ngbDropdownToggle
+      >
+        Le Sujet
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+        <button routerLink="/intro" ngbDropdownItem>Introduction</button>
+        <button routerLink="/histoire" ngbDropdownItem>Histoire</button>
+        <button routerLink="/details" ngbDropdownItem>Détails</button>
+      </div>
+    </div>
+    <div
+      ngbDropdown
+      #drop2="ngbDropdown"
+      class="d-inline-block"
+      (mouseenter)="drop2.open()"
+      (mouseleave)="drop2.close()"
+    >
+      <button
+        style="background: none; border: none"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        La Controverse
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button routerLink="/acteurs" ngbDropdownItem>Les Acteurs</button>
+        <button routerLink="/debats" ngbDropdownItem>Les Débats</button>
+        <button routerLink="/donnees" ngbDropdownItem>
+          Interview et Sondages
+        </button>
+      </div>
+    </div>
+    <div
+      ngbDropdown
+      #drop3="ngbDropdown"
+      class="d-inline-block"
+      (mouseenter)="drop3.open()"
+      (mouseleave)="drop3.close()"
+    >
+      <button
+        style="background: none; border: none"
+        id="dropdownBasic3"
+        ngbDropdownToggle
+      >
+        Les Ressources
+      </button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+        <button routerLink="/sources" ngbDropdownItem>Sources</button>
+        <button routerLink="/journal" ngbDropdownItem>Journal de Bord</button>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+    <a routerLink="/intro" class="home-btn"
+      ><h5>La censure sur les réseaux sociaux</h5></a
+    >
+  </div>
+</nav>

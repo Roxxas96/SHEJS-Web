@@ -1,0 +1,22 @@
+.content {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 100px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.tableau {
+  margin: auto;
+}
+.tableau td {
+  text-align: justify;
+  border: 1px solid black;
+  padding: 2%;
+}
+
+@media all and (max-width: 992px) {
+  .content {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}

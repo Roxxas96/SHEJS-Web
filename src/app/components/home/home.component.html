@@ -1,0 +1,83 @@
+<div class="content">
+  <div class="caroussel">
+    <ngb-carousel>
+      <ng-template ngbSlide *ngFor="let slide of carousselInfo">
+        <div class="picsum-img-wrapper">
+          <img [src]="slide.imageUrl" class="caroussel-img" />
+        </div>
+        <div class="carousel-caption">
+          <h1 style="margin-bottom: 3%">{{ slide.title }}</h1>
+          <p class="caroussel-desc">{{ slide.desc }}</p>
+          <button
+            class="btn btn-info btn-lg"
+            *ngIf="slide.button != ''"
+            (click)="scrollTo(slide.button == 'intro' ? intro1 : news)"
+            [routerLink]="slide.link"
+          >
+            En savoir plus
+          </button>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div #intro1 class="intro">
+    <img src="assets/Marteau.jpg" class="activable slide-right" />
+    <div class="activable fade">
+      <h2>Qu'est-ce que la censure ?</h2>
+      <p>
+        La censure est définie par le
+        <a href="https://www.linternaute.fr/dictionnaire/fr/definition/censure/"
+          >journal l’internaute</a
+        >
+        comme “Examen d'une autorité décidant de ce qui peut être publié et
+        diffusé”. Plus clairement, et surtout historiquement parlant, la censure
+        revient à taire un courant d’idée ou plus simplement une parole posant
+        problème. Si à une époque cela consistait à contrer les opposants
+        politiques d’un roi, ce n’est plus le cas aujourd’hui (enfin la majorité
+        du temps mais vous référer à l’article sur la situation en Chine pour
+        plus d’information).
+      </p>
+      <button class="btn btn-info" routerLink="/histoire">
+        En savoir plus
+      </button>
+    </div>
+  </div>
+  <div class="intro">
+    <div class="activable fade">
+      <h2>La controverse</h2>
+      <p>
+        Un sondage réalisé auprès des étudiants de Montpellier nous a permis de
+        nous rendre compte d’une chose : une très large majorité de la
+        population est consciente que cette censure existe (100% de réponse
+        positive à ce sujet, nous permettant d’élargir cela à une grande partie
+        de la population). Cependant nous avons pu remarquer une chose : bien
+        que connu ce sujet reste complexe et soulève plusieurs questions que ce
+        soit au niveau de l’éthique ou de la loi. Durant nos recherches,il est
+        apparu que cette controverse s’articule principalement autour d’un point
+        : la surpuissance des GAFA par rapport aux états. Mais il ne faut pas
+        oublier qu’il s’ajoute à ça une troisième grande classe d’acteurs dont
+        le poids n’est plus à négliger étant donné l’importance que ces dits
+        réseaux ont pris: les particuliers (ou plus largement les utilisateurs
+        particuliers des réseaux, à l’image de vous ou moi). Nous allons
+        articuler cette étude autour du point majeur que nous avons cité plus
+        haut, notamment en nous appuyant sur la récente affaire de la censure de
+        Donald Trump, ex-président des états-unis. En effet dans ce conflit nous
+        avons d’une part les organismes officiels tel les états, les agrégations
+        d’états (Union Européenne, etc.) qui doivent jouer sur deux tableaux :
+        d’une part ils doivent respecter la liberté d’expression (notamment dans
+        les pays prônant ces valeurs, en majorité des pays occidentaux, mais
+        nous reviendrons aussi sur le cas de la Chine dans un autre article) qui
+        est par exemple défendue aux états-unis par le premier amendement (« le
+        Congrès ne pourra faire aucune loi ayant pour objet (…) de limiter la
+        liberté de parole ou de presse »). Historiquement et lexicalement
+        parlant on peut remarquer que, le fait que cet amendement soit le
+        premier inscrit dans la loi américaine et que ce soit l’un des rares à
+        ne pas avoir subi un impact au cours du temps, c’est d’une importance
+        capitale de le respecter. Cependant ces mêmes états doivent encadrer les
+        principes de non-discrimination et non-incitation à la haine.
+      </p>
+      <button class="btn btn-info" routerLink="/acteurs">En savoir plus</button>
+    </div>
+    <img src="assets/Balance.jpg" class="activable slide-left" width="626px" />
+  </div>
+</div>

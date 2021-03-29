@@ -1,0 +1,16 @@
+<div class="content">
+  <div
+    *ngFor="let debat of debats; let i = index"
+    [ngClass]="{
+      paragraph: true,
+      left: i % 2 == 0,
+      right: i % 2 != 0,
+      activable: true
+    }"
+  >
+    <h2 style="text-align: left; margin-bottom: 5%">{{ debat.titre }}</h2>
+    <p>
+      {{ debat.contenu }}
+    </p>
+  </div>
+</div>

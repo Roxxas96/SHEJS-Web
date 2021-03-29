@@ -1,0 +1,52 @@
+.navbar {
+  height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  box-shadow: 0px 1px 5px 2px black;
+}
+.home-btn {
+  color: black;
+  text-decoration: none;
+}
+.right {
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.dropdown {
+  margin: 0 10px;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+@media all and (max-width: 992px) {
+  .right a h5 {
+    display: none;
+  }
+}

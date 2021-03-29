@@ -2,3 +2,7 @@
 
 /* Importing Bootstrap SCSS file. */
 @import "~bootstrap/scss/bootstrap";
+
+.dropdown-menu {
+  transform: translateY(-2px);
+}
